@@ -1,0 +1,11 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+
+link = "https://www.avito.ru/2639542363"
+browser = webdriver.Chrome()
+browser.get(link)
+favoriet = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[3]/div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[3]/div/div/div/div[1]/button')
+favoriet.click()
+print("Объявление успешно добавлено в избранное")
+browser.quit() 
